@@ -1,0 +1,31 @@
+[package]
+name = "ultra_fast_ru_voice"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1.35", features = ["full"] }
+tokio-tungstenite = "0.21"
+
+bytemuck = "1.14"
+
+futures = "0.3"
+futures-util = "0.3"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+whisper-rs = "0.10"
+
+cpal = "0.15"
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bytes = "1.5"
+anyhow = "1.0"
+thiserror = "1.0"
+num_cpus = "1.0"
+clap = { version = "4.0", features = ["derive"] }
+uuid = { version = "1.0", features = ["v4"] }
+reqwest = { version = "0.11", features = ["json"] }
+hex = "0.4"
+base64 = "0.21"
+dotenvy = "0.15"

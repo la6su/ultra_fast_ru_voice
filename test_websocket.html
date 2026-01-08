@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraFast RU Voice Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .connected { background: #d4edda; color: #155724; }
+        .disconnected { background: #f8d7da; color: #721c24; }
+        .recording { background: #fff3cd; color: #856404; }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #results {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 200px;
+            background: #f9f9f9;
+        }
+        .event {
+            margin: 5px 0;
+            padding: 5px;
+            background: white;
+            border-left: 3px solid #007bff;
+        }
+        .vad { border-left-color: #28a745; }
+        .stt { border-left-color: #007bff; }
+        .llm { border-left-color: #ffc107; }
+        .tts { border-left-color: #dc3545; }
+    </style>
+</head>
+<body>
+    <h1>UltraFast RU Voice Test</h1>
+
+    <div id="status" class="status disconnected">
+        Status: Disconnected
+    </div>
+
+    <div>
+        <button id="connectBtn">Connect to Server</button>
+        <button id="startBtn" disabled>Start Recording</button>
+        <button id="stopBtn" disabled>Stop Recording</button>
+        <button id="clearBtn">Clear Results</button>
+    </div>
+
+    <div>
+        <h3>Test Audio:</h3>
+        <button onclick="playTestAudio()">Play Test Audio (Russian)</button>
